@@ -1,0 +1,116 @@
+.testmonials-wrap{
+    background-image: url(../img/testmonials/testmonials_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.testmonials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .testmonials__title{
+        margin-top: 57px;
+        text-align: center;
+        font-family: $font-montserrat;
+        @include textProperty(bold,36px,48px);
+        color: $white;
+    }
+    .comments{
+        margin-top: 57px;
+    }
+    .testmonials__belowtext{
+        position: relative;
+        margin: 37px 0 22px;
+        padding: 0 25px ;
+        text-align: center;
+        font-family: $font-lato;
+        @include textProperty(normal,14px,21px);
+        color: $purple-light;
+        &::after{
+         content: '';
+         position: absolute;
+         left: 35px;
+         bottom: -18px;
+         right: 35px;
+         height: 2px;
+         background-color: #645766;
+        }
+    }
+}
+.comments{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    row-gap: 45px;
+    .comments__item{
+        // margin-bottom:45px;
+        max-width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .comments__text{
+            margin-top: 28px;
+            text-align: center;
+            font-style: italic;
+            font-family: $font-lato;
+            @include textProperty(bold,16px,24px);
+            color: $white;   
+        }
+    }
+    // &>li:last-child .comments__item{
+    //     margin-bottom: 0;
+    // }
+}
+@media screen and (min-width: 481px){
+    .testmonials{
+        .testmonials__title{
+            margin-top: 85px;
+            @include textProperty(bold,42px,44px);
+        }
+        .comments{
+            margin-top: 88px;
+            align-items: flex-end;
+        }
+        .testmonials__belowtext{
+            margin: 67px 0 19px;
+            &::after{
+                left: 105px;
+                right: 105px;
+               }
+        }
+    }
+    .comments{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 45px;
+        column-gap: 60px;
+        .comments__item{
+            max-width: 345px;
+        }
+    }
+}
+
+@media screen and (min-width: 993px){
+    .testmonials{
+        .testmonials__title{
+            margin-top: 108px;
+            @include textProperty(bold,42px,44px);
+        }
+        .comments{
+            margin-top: 84px;
+        }
+        .testmonials__belowtext{
+            margin: 118px 0 19px;
+            max-width:  900px; 
+            &::after{
+                left: 240px;
+                right: 240px;
+            }
+        }
+    }
+    .comments{
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 115px;
+        column-gap: 90px;
+    }
+
+}

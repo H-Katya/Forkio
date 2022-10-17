@@ -1,0 +1,16 @@
+@mixin fa-icon() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+    border: 2px solid ;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+@mixin textProperty ($font-weight, $font-size, $line-height) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+}

@@ -1,0 +1,166 @@
+.pricing-wrap{
+    background-image: url(../img/pricing/pricing-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pricing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .pricing__title{
+        margin-top: 14px;
+        text-align: center;
+        font-family: $font-montserrat;
+        @include textProperty(bold,28px,42px);
+        color: $white;
+    }
+    .tariffs-wrap{
+        margin: 32px 0 18px;
+    }
+}
+.tarif{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgba(255, 255, 255, 0.11);
+    width: 257px;
+    height:457px;  
+    .tarif__title{
+        width: 100%;
+        padding: 36px 0;
+        text-align: center;
+        font-family: $font-montserrat;
+        @include textProperty(normal,24px,24px);
+        text-transform: uppercase;
+        color: $white;
+        background-color:rgba(255, 255, 255, 0.06);
+    }
+    .tariff__cost{
+        padding: 30px 0 20px;
+        text-align: center;
+        font-family: $font-montserrat;
+        @include textProperty(bold,60px,62px);
+        color: $white;
+    }
+    .tariff__time{
+        padding-bottom: 73px;
+        position: relative;
+        text-align: center;
+        font-family: $font-montserrat;
+        @include textProperty(normal,14px,16px);
+        text-transform: uppercase;
+        color: $white;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 30px;
+            left: 15px;
+            width: 60px;
+            height: 5px;                
+            background-color: $purple;
+        }
+    }
+    .tariff__services{
+        padding-bottom: 37px;
+        text-align: center;
+        font-family: $font-montserrat;
+        @include textProperty(normal,16px,28px);
+        color: $white;
+    }
+    .button-tarif{
+        padding: 15px 38px;
+        text-align: center;
+        font-family: $font-montserrat;
+        @include textProperty(normal,15px,15px);
+        text-transform: uppercase;
+        border-radius: 40px;
+        color: $white;
+        background-color:rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        cursor: pointer;
+    }
+}
+
+.tariffs-wrap{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(min-content, max-content);
+    row-gap: 18px;
+    justify-items: center;
+    & li:nth-child(3){
+        .tarif{
+            background-color:rgba(70, 48, 72, 0.84);
+            width: 300px;
+            height:560px; 
+            .tarif__title{
+                padding: 43px 0;
+                background-color:rgba(0, 0, 0, 0.11);
+            }
+            .tariff__cost{
+                padding: 14px 0 16px;
+                @include textProperty(bold,82px,84px);
+            }
+            .tariff__time{
+                padding-bottom: 91px;
+                @include textProperty(normal,14px,16px);
+            }
+            .tariff__services{
+                @include textProperty(normal,16px,32px);
+            }
+            .button-tarif{
+                padding: 18px 48px;
+                @include textProperty(normal,16px,18px);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px){
+    .pricing{
+        .pricing__title{
+            margin-top: 88px;
+            @include textProperty(bold,42px,44px);
+        }
+        .tariffs-wrap{
+            margin: 39px 0 94px;
+        }
+    }
+    .tariffs-wrap{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(min-content, max-content);
+        row-gap:30px;
+        column-gap: 25px;
+        justify-items:initial;
+        & li:nth-child(1){
+            display: flex;
+            justify-content: flex-end;
+        }
+        & li:nth-child(4){
+            display: flex;
+            align-items: center;
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 993px){
+    .pricing{
+        .pricing__title{
+            margin-top: 112px;
+            @include textProperty(bold,48px,50px);
+        }
+        .tariffs-wrap{
+            margin: 61px 0 94px;
+        }
+    }
+    .tariffs-wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+}

@@ -1,0 +1,104 @@
+.hero-wrap{
+    background-image: url(../img/hero-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    .hero__title{
+        margin-top: 156px;
+        text-align: center;
+        font-family: $font-montserrat;
+        @include textProperty (bold, 48px, 48px);
+        color:$white;
+    }
+    .hero__subtitle{
+        margin-top: 20px;
+        text-align: center;
+        font-family: $font-montserrat;
+        @include textProperty (400, 18px, 24px);
+        color:$purple;
+
+    }
+    .hero__text{
+        margin-top: 14px;
+        text-align: center;
+        font-family: $font-montserrat;
+        @include textProperty (400, 14px, 14px);
+        color:$grey;
+        text-transform: uppercase;
+    }
+
+}
+.hero__use{
+    margin-top: 344px;
+    position: relative;
+    top: 48px;
+    display: flex;
+    flex-direction: column;
+    .hero-button{
+        padding:13px 29px ;
+        text-align: center;
+        font-family: $font-montserrat;
+        @include textProperty (bold, 15px, 18px);
+        color:$white;
+        background-color: $purple;
+        border: 1px solid $purple;
+        border-radius: 40px;
+        text-transform: uppercase;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover{
+            color:$purple;
+            background-color: $white;
+        }
+    }
+    .hero__underButton{
+        margin-top: 12px;
+        text-align: center;
+        font-family: $font-montserrat;
+        @include textProperty (400, 14px, 14px);
+        color:$grey;
+
+    }
+}
+
+@media screen and (min-width: 481px){
+    .message{
+        .hero__title{
+            margin-top: 186px;
+            @include textProperty (bold, 72px, 72px);
+        }
+        .hero__subtitle{
+            @include textProperty (400, 24px, 24px);
+        }
+        .hero__text{
+            margin-top: 19px;
+        }
+    }
+    .hero__use{
+        margin-top: 376px;
+        top: 66px;
+        .hero-button{
+            padding:23px 60px ;
+            @include textProperty (bold, 21px, 23px);
+        }
+        .hero__underButton{
+            margin-top: 18px;
+            @include textProperty (400, 14px, 16px);
+        }
+    }
+
+}
+@media screen and (min-width: 993px){
+    .hero__use{
+        margin-top: 363px;
+    }
+}

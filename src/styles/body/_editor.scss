@@ -1,0 +1,99 @@
+.editor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .edittor__title{
+        margin-top: 130px;
+        text-align: center;
+        font-family: $font-montserrat;
+        @include textProperty (bold, 26px, 28px);
+        color:#635C73;
+        text-transform: uppercase;       
+    }
+    .editor__text{
+        margin-top: 27px;
+        text-align: center;
+        font-family: $font-lato;
+        @include textProperty (normal, 14px, 20px);
+        color:$grey-dark;
+    }
+    &>ul{
+        margin: 36px 0 88px;
+    }
+    
+}
+.pagehead-actions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    &>li {
+        cursor: pointer;
+    }
+}
+.btn-sm{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 12px;
+    border:1px solid;
+    border-radius:6px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    @include textProperty (normal, 12px, 20px);
+    text-decoration: none;
+    color: #24292f;
+    .btn-sm__counter{
+        margin-left: 2px;
+        color: inherit;
+        text-shadow: none;
+        vertical-align: top;
+        background-color: rgba(27,31,36,0.08);
+        display: inline-block;
+        min-width: 20px;
+        padding: 0 6px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        text-align: center;
+        border: 1px solid rgba(0,0,0,0);
+        border-radius: 2em;
+    }
+    &:active{
+        background-color: rgba(208,215,222,0.24);
+    }
+}
+.d-inline{
+    display:inline;
+}
+@media screen and (min-width: 481px){
+    .editor{
+        .edittor__title{
+            margin-top: 156px;
+            @include textProperty (bold, 42px, 42px);     
+        }
+        .editor__text{
+            @include textProperty (normal, 21px, 32px);
+        }
+        &>ul{
+            margin: 36px 0 98px;
+        }
+    }
+
+}
+@media screen and (min-width: 993px){
+    .editor{
+        .edittor__title{
+            margin-top: 130px;
+            @include textProperty (bold, 54px, 54px);     
+        }
+        .editor__text{
+            margin-top: 35px;
+            max-width: 860px;
+        }
+        &>ul{
+            margin: 20px 0 70px;
+        }
+    }
+}
